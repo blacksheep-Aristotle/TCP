@@ -18,7 +18,10 @@ class TCPReceiver {
     StreamReassembler _reassembler;
 
     //! The maximum number of bytes we'll store.
+    size_t m_star;
     size_t _capacity;
+    bool m_isn=false;
+    bool m_fin=false;
 
   public:
     //! \brief Construct a TCP receiver
